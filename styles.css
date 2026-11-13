@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f7f6;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.subtitulo {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.contador {
+  font-size: 56px;
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 20px;
+  transition: color 0.3s;
+}
+
+.btn {
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-verde  { background-color: #2ecc71; }
+.btn-naranja { background-color: #f39c12; }
+.btn-gris   { background-color: #95a5a6; }
+
+.botones-extra {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.botones-extra .btn {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+table {
+  width: 100%;
+  margin-top: 24px;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+}
+
+th {
+  background-color: #f8f9fa;
+  color: #7f8c8d;
+  font-size: 14px;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+td {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Reto 2: cuando superan 10 clics */
+.contador.alto {
+  color: #e74c3c;
+}
+
+.tarjeta.fondo-alto {
+  background-color: #fff5f5;
+}
