@@ -1,4 +1,6 @@
 // 1. Obtener los elementos del DOM por su ID
+// Contador de clics - Taller SENA
+// Autor: Daniel 
 const textoContador = document.getElementById("contador");
 const boton = document.getElementById("btn-like");
 const botonRestar = document.getElementById("btn-restar");
