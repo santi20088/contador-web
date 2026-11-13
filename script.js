@@ -37,3 +37,18 @@ boton.addEventListener("click", () => {
   // Agregar la fila al INICIO para que lo más reciente quede arriba
   cuerpoTabla.prepend(fila);
 });
+// RETO 1: Restar like (también elimina el último registro)
+botonRestar.addEventListener("click", () => {
+  if (likes > 0) {
+    likes--;
+    textoContador.textContent = likes;
+    cuerpoTabla.firstElementChild.remove(); // quita la fila más reciente
+  }
+});
+
+// RETO 1: Reiniciar a cero
+botonReiniciar.addEventListener("click", () => {
+  likes = 0;
+  textoContador.textContent = likes;
+  cuerpoTabla.innerHTML = ""; // vacía la tabla
+});
