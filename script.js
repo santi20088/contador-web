@@ -18,6 +18,12 @@ function obtenerHora() {
   return `${horas}:${minutos}:${segundos}`;
 }
 
+// RETO 2: cambiar color si likes > 10 (manipulación manual del DOM)
+function actualizarColor() {
+  textoContador.classList.toggle("alto", likes > 10);
+  tarjeta.classList.toggle("fondo-alto", likes > 10);
+}
+
 // 4. Escuchar el evento 'click' y manipular el DOM
 boton.addEventListener("click", () => {
   likes++;
@@ -36,13 +42,17 @@ boton.addEventListener("click", () => {
 
   // Agregar la fila al INICIO para que lo más reciente quede arriba
   cuerpoTabla.prepend(fila);
+
+  actualizarColor(); // RETO 2
 });
+
 // RETO 1: Restar like (también elimina el último registro)
 botonRestar.addEventListener("click", () => {
   if (likes > 0) {
     likes--;
     textoContador.textContent = likes;
     cuerpoTabla.firstElementChild.remove(); // quita la fila más reciente
+    actualizarColor(); // RETO 2
   }
 });
 
@@ -51,4 +61,5 @@ botonReiniciar.addEventListener("click", () => {
   likes = 0;
   textoContador.textContent = likes;
   cuerpoTabla.innerHTML = ""; // vacía la tabla
+  actualizarColor(); // RETO 2
 });
